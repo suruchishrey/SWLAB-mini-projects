@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mobile Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+      
+        <div class="container bg-light text-black" class="border border-light" class="rounded" style="padding:30px; margin: 20px; margin-left: 0px; margin-right: 0px;">
+            <h2>A Mobile Price Prediction System</h2>
+        </div>
+        <div>{%if price%}
+          <b>predicted price for the entered details:
+          {{price}}</b>
+          <br>
+          {%endif%}
+          <br>
+          <h3>Enter new details:</h3><br>
+        </div>
+        
+    <form action=" " method="POST">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="overs">battery_power:</label>
+          <input type="text" class="form-control" placeholder="Enter Current Score" name="battery_power">
+        </div>
+
+        <div class="form-group">
+            <label for="overs">blue:</label>
+            <input type="text" class="form-control" placeholder="Enter Wickets fallen" name="blue">
+        </div>
+
+        <div class="form-group">
+            <label for="overs">clock_speed:</label>
+            <input type="text" class="form-control" placeholder="Enter overs bowled" name="clock_speed">
+        </div>
+
+        <div class="form-group">
+            <label for="overs">dual_sim:</label>
+            <input type="text" class="form-control" placeholder="Enter Striker score" name="dual_sim">
+          </div>
+
+          <div class="form-group">
+            <label for="overs">fc:</label>
+            <input type="text" class="form-control" placeholder="Enter non-striker score" name="fc">
+          </div>
+          <div class="form-group">
+            <label for="overs">four_g:</label>
+            <input type="text" class="form-control" placeholder="Enter Current Score" name="four_g">
+          </div>
+  
+          <div class="form-group">
+              <label for="overs">int_memory:</label>
+              <input type="text" class="form-control" placeholder="Enter Wickets fallen" name="int_memory">
+          </div>
+  
+          <div class="form-group">
+              <label for="overs">m_dep:</label>
+              <input type="text" class="form-control" placeholder="Enter overs bowled" name="m_dep">
+          </div>
+  
+          <div class="form-group">
+              <label for="overs">mobile_wt:</label>
+              <input type="text" class="form-control" placeholder="Enter Striker score" name="mobile_wt">
+            </div>
+  
+            <div class="form-group">
+              <label for="overs">n_cores:</label>
+              <input type="text" class="form-control" placeholder="Enter non-striker score" name="n_cores">
+            </div>
+            <div class="form-group">
+              <label for="overs">pc:</label>
+              <input type="text" class="form-control" placeholder="Enter Current Score" name="pc">
+            </div>
+    
+            <div class="form-group">
+                <label for="overs">px_height:</label>
+                <input type="text" class="form-control" placeholder="Enter Wickets fallen" name="px_height">
+            </div>
+    
+            <div class="form-group">
+                <label for="overs">px_width:</label>
+                <input type="text" class="form-control" placeholder="Enter overs bowled" name="px_width">
+            </div>
+    
+            <div class="form-group">
+                <label for="overs">ram:</label>
+                <input type="text" class="form-control" placeholder="Enter Striker score" name="ram">
+              </div>
+    
+              <div class="form-group">
+                <label for="overs">sc_h:</label>
+                <input type="text" class="form-control" placeholder="Enter non-striker score" name="sc_h">
+              </div>
+              <div class="form-group">
+                <label for="overs">sc_w:</label>
+                <input type="text" class="form-control" placeholder="Enter Current Score" name="sc_w">
+              </div>
+      
+              <div class="form-group">
+                  <label for="overs">talk_time:</label>
+                  <input type="text" class="form-control" placeholder="Enter Wickets fallen" name="talk_time">
+              </div>
+      
+              <div class="form-group">
+                  <label for="overs">three_g:</label>
+                  <input type="text" class="form-control" placeholder="Enter overs bowled" name="three_g">
+              </div>
+      
+              <div class="form-group">
+                  <label for="overs">touch_screen:</label>
+                  <input type="text" class="form-control" placeholder="Enter Striker score" name="touch_screen">
+                </div>
+      
+                <div class="form-group">
+                  <label for="overs">wifi:</label>
+                  <input type="text" class="form-control" placeholder="Enter non-striker score" name="wifi">
+                </div>
+
+        <button type="submit" class="btn btn-outline-dark">Predict Price</button>
+      </form>
+
+      
+      </div>
+</body>
+</html>
